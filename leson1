@@ -1,0 +1,168 @@
+exercise 1:
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        int sum = 0;
+        System.out.println("enter 3 names:");
+        String name1 = scan.nextLine();
+        String name2 = scan.nextLine();
+        String name3 = scan.nextLine();
+        int num = name1.compareTo(name2);
+        int num1 = name1.compareTo(name3);
+        int num2 = name2.compareTo(name3);
+        int num3 = name2.compareTo(name1);
+        int num4 = name3.compareTo(name2);
+        int num5 = name3.compareTo(name2);
+        if(num< 0 && num1< 0)
+        {
+            System.out.println("the names are " + name1);
+            int nam = name2.compareTo(name3);
+            if (nam<0)
+            {
+                System.out.println(name2);
+                System.out.println(name1);
+            }
+            else{
+                System.out.println(name1);
+                System.out.println(name2);
+            }
+        }
+        if(num2< 0 && num3< 0 )
+        {
+            System.out.println("the names are " + name2);
+            int nam1 = name1.compareTo(name3);
+            if (nam1<0)
+            {
+                System.out.println(name1);
+                System.out.println(name3);
+            }
+            else{
+                System.out.println(name3);
+                System.out.println(name1);
+            }
+        }
+        if(num4< 0 && num5< 0)
+        {
+            System.out.println("the names are " + name3);
+            int nam2 = name1.compareTo(name2);
+            if (nam2<0)
+            {
+                System.out.println(name1);
+                System.out.println(name2);
+            }
+            else{
+                System.out.println(name2);
+                System.out.println(name1);
+            }
+        }
+    }
+}
+
+exercise 2:
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("enter a 4 word sentence ");
+        String str = scan.nextLine();
+        int size = str.length();
+        System.out.println("there are " + size + " chars in the sentence");
+    }
+}
+
+exercise 3:
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args)
+    {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("enter a 3 char string ");
+        String str = scan.nextLine();
+        int size = str.length();
+        if(size==3)
+        {
+            if(str.charAt(0) == str.charAt(2))
+            {
+                System.out.println("true");
+            }
+            else
+            {
+                 System.out.println("false");
+            }
+        }
+        
+    }
+}
+
+exercies 4:
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("enter a 3 char string ");
+        String str = scan.nextLine();
+        int size = str.length();
+        if(size==3)
+        {
+            System.out.print(str.charAt(2));
+            System.out.print(str.charAt(1));
+            System.out.print(str.charAt(0));
+        }
+    }
+}
+
+exercise 5:
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("enter a 4 char string ");
+        String str = scan.nextLine();
+        int size = str.length();
+        if(size==4)
+        {
+            str = str.replace('a', '*');
+            str = str.replace('e', '*');
+            str = str.replace('u', '*');
+            str = str.replace('o', '*');
+            str = str.replace('i', '*');
+            System.out.println(str);
+            
+        }
+    }
+}
+
+exercise 6:
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int num;
+        Random r =new Random();
+        num = r.nextInt(100);
+        int num1 = num-10;
+        System.out.println(num);
+        if(num1<0)
+        {
+            System.out.println("number is in single digits");
+        }
+        else
+        {
+            System.out.println("number is in double digits");
+        }
+        if(num%3==0)
+        {
+            System.out.println("the number is divided by 3");
+        }
+        if(num%2==0)
+        {
+            System.out.println("number is divided by 2");
+        }
+    }
+}
