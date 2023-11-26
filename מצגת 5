@@ -1,0 +1,141 @@
+exercise 1:
+
+import java.util.Scanner;
+class Main {
+  public static void name(){
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Enter a name: ");
+    String name = scan.nextLine();
+    System.out.println("Hello "+name);
+  }
+  public static void main(String[] args) {
+    name();
+  }
+}
+
+exercise 2:
+
+import java.util.Scanner;
+class Main {
+  public static void n1(int num)
+  {
+    System.out.print(num / 5);
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type a number: ");
+    int num = scan.nextInt();
+    n1(num);
+  }
+}
+
+exercise 3: 
+
+import java.util.Scanner;
+class Main {
+  public static int numbers(int n1,int n2){
+    return n1*n2;
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type the first number: ");
+    int n1 = scan.nextInt();
+    System.out.print("Type the second number: ");
+    int n2 = scan.nextInt();
+    Main m = new Main();
+    int num = m.numbers(n1,n2);
+    System.out.println(numbers(n1,n2));
+  }
+}
+
+exercise 4:
+
+import java.util.Scanner;
+class Main {
+  public static double n1(int num1,int num2,int num3)
+  {
+    System.out.println(num1+num2+num3);
+    return(num1+num2+num3)/3;
+  }
+  public static void main(String[] args) {
+    Main m = new Main();
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type the first number: ");
+    int num1 = scan.nextInt();
+    System.out.print("Type the second number: ");
+    int num2 = scan.nextInt();
+    System.out.print("Type the third number: ");
+    int num3 = scan.nextInt();
+    double n2 = m.n1(num1,num2,num3);
+    System.out.println(n2);
+  }
+}
+
+exercise 5:
+
+import java.util.Scanner;
+class Main {
+  public static void circle(int num){
+    double num1 = Math.pow(num,2);
+    System.out.print(num*2+3.14+", "+num1*3.14);
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter a radius of the circle: ");
+    int num = scan.nextInt();
+    circle(num);
+  }
+}
+
+exercise 6:
+
+class Main {
+  public double num(int a, int b){
+    double d = Math.pow(a,2);
+    double e = Math.pow(b,2);
+    double f = d+e;
+    double c = Math.sqrt(f);
+    return c;
+  }
+  public static void main(String[] args) {
+    Main m = new Main();
+    double z = m.num(12,10);
+    System.out.println(z);
+  }
+}
+
+exercise 7:
+
+class Main {
+  public static void name(char n1, char n2, char n3)
+  {
+    System.out.println(n3+""+n2+""+n1);
+  }
+  public static void main(String[] args) {
+    char n1 = 'a';
+    char n2 = 'b';
+    char n3 = 'c';
+    name(n1,n2,n3);
+  }
+}
+
+exercise 8:
+
+import java.util.Scanner;
+class Main {
+  public static int seq(int num, int d, int n){
+    return num+(n-1)*d;
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    Main m = new Main();
+    System.out.print("Enter the first number in the sequence: ");
+    int num = scan.nextInt();
+    System.out.print("Enter the location of the number in the sequence: ");
+    int d = scan.nextInt();
+    System.out.print("Enter the difference of the sequence: ");
+    int n = scan.nextInt();
+    int z = m.seq(num,d,n);
+    System.out.print(z);
+  }
+}
