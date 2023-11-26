@@ -1,0 +1,270 @@
+exercise 1:
+
+import java.util.Scanner;
+class Main {
+  public static void func(){
+    Scanner scan = new Scanner(System.in);
+        double sum = 0;
+        for (int i = 0; i < 5; i++){
+          System.out.print("Type 5 numbers: ");
+          int num = scan.nextInt();
+          sum += num;
+        }
+        double avg = sum / 5;
+        System.out.print(avg);
+    }
+  public static void main(String[] args) {
+    func();
+  }
+}
+
+exercise 2:
+
+import java.util.Scanner;
+class Main {
+  public static void func(){
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type a string: ");
+    String str = scan.nextLine();
+    int numbers = 1;
+    while(!str.equals("enter"))
+    {
+      System.out.print("Type another string: ");
+      str = scan.nextLine();
+      numbers+=1;
+    }
+    System.out.print("The amount of word are:"+numbers);
+  }
+  public static void main(String[] args) {
+    func();
+  }
+}
+
+exercise 3:
+
+import java.util.Scanner;
+class Main {
+  public static void func(int num)
+  {
+    Scanner scan = new Scanner(System.in);
+    int i = 3;
+    do
+    {
+        i--;
+        if(num>=1000&&num<=9999)
+        {
+            System.out.print("How much money: ");
+            int money = scan.nextInt();
+            System.out.print("Thank you sir, the money that u had withdrawn is:"+money+" ILS.");
+            i=0;
+        }
+        else if(num<1000||num>9999&&i>0)
+        {
+            System.out.print("Error...please try again: ");
+            num = scan.nextInt();
+        }
+    }
+    while(i>0);
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type your 4 digital credit card code:");
+    int num = scan.nextInt();
+    func(num);
+  }
+}
+
+exercise 4:
+
+import java.util.Scanner;
+class Main {
+  public static void func(String word){
+    int len = word.length();
+    int half = len / 2;
+    String word1 = word.substring(half);
+    String word2 = "";
+    char ch;
+    if(half%2 == 0)
+    {
+      for(int i = 0;i<half;i++)
+      {
+          ch = word.charAt(i);
+          word2 = ch + word2;
+      }
+    }
+    else{
+      for(int i = 0;i<=half;i++)
+      {
+          ch = word.charAt(i);
+          word2 = ch + word2;
+      }
+    }
+    if(word1.equals(word2))
+    {
+      System.out.println("The word is palindrome.");
+    }
+    else
+    {
+      System.out.print("The word is not palindrome.");
+    }
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type a word: ");
+    String word = scan.nextLine();
+    func(word);
+  }
+}
+
+exercise 5:
+
+import java.util.Scanner;
+class Main {
+  public static void num(int num){
+    for(int i = 1;i<=num;i++){
+      if(num%i==0&&i!=num){
+        System.out.print(i+",");
+      }
+      else if(i == num){
+        System.out.print(i+".");
+      }
+    }
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Type a number: ");
+    int num = scan.nextInt();
+    num(num);
+  }
+}
+
+exercise 6:
+
+import java.util.Scanner;
+class Main {
+  public static void num(int num){
+    for(int i = 1;i<=num;i++){
+      if(num%i==0&&i!=num){
+        System.out.print(i+",");
+      }
+      else if(i == num){
+        System.out.print(i+".");
+      }
+    }
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Type a number: ");
+    int num = scan.nextInt();
+    num(num);
+  }
+}
+
+exercise 7:
+
+import java.util.Scanner;
+class Main {
+  public static void func(){
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type the first grade: ");
+    int num = scan.nextInt();
+    int max = num;
+    int min = num;
+    for(int i = 0;i<6;i++){
+      System.out.print("Type the next grade: ");
+      num = scan.nextInt();
+      if(num>max){
+        max = num;
+      }
+      if(num<min){
+        min = num;
+      }
+    }
+    System.out.print("The highest grade is: "+max+", The lowest grade is: "+min);
+  }
+  public static void main(String[] args) {
+    func();
+  }
+}
+
+exercise 8:
+
+import java.util.Scanner;
+class Main {
+  public static boolean func(int num){
+    int num1 = 1;
+    int num2 = 1;
+    int num3 = 0;
+    while(num1<num&&num2<num)
+    {
+        num1 +=num2;
+        num2 +=num1;
+        if(num1==num||num2==num)
+        {
+          num3+=1;
+        }
+    }
+    if(num3>0){
+        return true;
+    }
+    return false;
+  }
+  public static void main(String[] args) {
+    Main m = new Main();
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type a number: ");
+    int num = scan.nextInt();
+    boolean z = m.func(num);
+    System.out.print(z);
+  }
+}
+
+exercise 9:
+
+import java.util.Scanner;
+class Main {
+  public static void func(int num1, int num2){
+    int num = 0;
+    for(int i = 0;i<num2;i++){
+      num += num1;
+    }
+    System.out.print("The score is: " + num);
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Type 2 numbers: ");
+    int num1 = scan.nextInt();
+    int num2 = scan.nextInt();
+    func(num1,num2);
+  }
+}
+
+exercise 10:
+
+import java.util.Scanner;
+class Main {
+  public static void func(int h){
+    int num = 1;
+    for(int i = h;i>0;i--)
+    {
+      for(int k = i-1;k>0;k--)
+        {
+          System.out.print(" ");
+        }
+      for(int p = num;p>0;p--){
+        System.out.print("*");
+      }
+      for(int w = i-1;w>0;w--){
+          System.out.print(" ");
+        }
+      num+=2;
+      System.out.println("");
+    }
+  }
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Type the height of the triangle: ");
+    int h = scan.nextInt();
+    func(h);
+  }
+} 
